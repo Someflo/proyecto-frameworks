@@ -1,0 +1,23 @@
+## Visual Studio / .NET / WPF gitignore
+.vs/
+bin/
+obj/
+*.user
+*.userosscache
+*.sln.docstates
+*_wpftmp.csproj
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates

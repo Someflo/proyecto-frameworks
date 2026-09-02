@@ -1,0 +1,17 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!-- Paleta de Colores para la Aplicación y Botones Estilo Minecraft -->
+    <SolidColorBrush x:Key="MC_TextWhite" Color="#FFFFFF"/>
+    <SolidColorBrush x:Key="MC_TextShadow" Color="#3F3F3F"/>
+    <SolidColorBrush x:Key="MC_BorderDark" Color="#000000"/>
+    <SolidColorBrush x:Key="MC_ShadowLow" Color="#373737"/>
+    <SolidColorBrush x:Key="MC_HighlightHi" Color="#FFFFFF"/>
+    <SolidColorBrush x:Key="MC_BaseGray" Color="#707070"/>
+    <SolidColorBrush x:Key="MC_HoverGray" Color="#8B8B8B"/>
+    <SolidColorBrush x:Key="MC_PressedGray" Color="#555555"/>
+    <SolidColorBrush x:Key="MC_LightGray" Color="#A9A9A9"/>
+    <SolidColorBrush x:Key="MC_SlotBg" Color="#8B8B8B"/>
+    <SolidColorBrush x:Key="MC_AccentBar" Color="#FFFF55"/>
+
+</ResourceDictionary>

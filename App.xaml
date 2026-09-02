@@ -1,0 +1,16 @@
+<Application x:Class="Registro_Estudianes_36.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Registro_Estudianes_36"
+             StartupUri="login/formularios/formulario_login.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="estilos/estilos_colores.xaml"/>
+                <ResourceDictionary Source="estilos/estilos_label.xaml"/>
+                <ResourceDictionary Source="estilos/estilos_boton.xaml"/>
+                <ResourceDictionary Source="estilos/estilos_textbox.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
