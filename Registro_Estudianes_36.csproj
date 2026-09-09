@@ -55,35 +55,35 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="estilos\estilos_colores.xaml">
+    <Page Include="Recursos\estilos_colores.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="estilos\estilos_label.xaml">
+    <Page Include="Recursos\estilos_label.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="estilos\estilos_boton.xaml">
+    <Page Include="Recursos\estilos_boton.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="estilos\estilos_textbox.xaml">
+    <Page Include="Recursos\estilos_textbox.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="menu\Materias\form_materias.xaml">
+    <Page Include="Vistas\Materias\form_materias.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="login\formularios\formulario_login.xaml">
+    <Page Include="Login\formulario_login.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="principal\formularios\Form_principal.xaml">
+    <Page Include="Principal\Form_principal.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="menu\Inicio\form_inicio.xaml">
+    <Page Include="Vistas\Inicio\form_inicio.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -91,17 +91,73 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="login\formularios\formulario_login.xaml.cs">
+    <Compile Include="Login\formulario_login.xaml.cs">
       <DependentUpon>formulario_login.xaml</DependentUpon>
     </Compile>
-    <Compile Include="principal\formularios\Form_principal.xaml.cs">
+    <Compile Include="Principal\Form_principal.xaml.cs">
       <DependentUpon>Form_principal.xaml</DependentUpon>
     </Compile>
-    <Compile Include="menu\Inicio\form_inicio.xaml.cs">
+    <Compile Include="Vistas\Inicio\form_inicio.xaml.cs">
       <DependentUpon>form_inicio.xaml</DependentUpon>
     </Compile>
-    <Compile Include="menu\Materias\form_materias.xaml.cs">
+    <Compile Include="Vistas\Materias\form_materias.xaml.cs">
       <DependentUpon>form_materias.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Vistas\Materias\Paginas\Pagina_Materias.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="Vistas\Materias\Paginas\Pagina_Materias.xaml.cs">
+      <DependentUpon>Pagina_Materias.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Vistas\Alumnos\Paginas\Pagina_Alumnos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="Vistas\Alumnos\Paginas\Pagina_Alumnos.xaml.cs">
+      <DependentUpon>Pagina_Alumnos.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Vistas\Incidencias\Paginas\Pagina_Incidencias.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="Vistas\Incidencias\Paginas\Pagina_Incidencias.xaml.cs">
+      <DependentUpon>Pagina_Incidencias.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Vistas\WebCusva\Paginas\Pagina_WebCusva.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="Vistas\WebCusva\Paginas\Pagina_WebCusva.xaml.cs">
+      <DependentUpon>Pagina_WebCusva.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Vistas\Semanas\Paginas\Pagina_Semanas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="Vistas\Semanas\Paginas\Pagina_Semanas.xaml.cs">
+      <DependentUpon>Pagina_Semanas.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Vistas\KillExcels\Paginas\Pagina_KillExcels.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="Vistas\KillExcels\Paginas\Pagina_KillExcels.xaml.cs">
+      <DependentUpon>Pagina_KillExcels.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Vistas\Pociones\Paginas\Pagina_Pociones.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="Vistas\Pociones\Paginas\Pagina_Pociones.xaml.cs">
+      <DependentUpon>Pagina_Pociones.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Vistas\Ajustes\Paginas\Pagina_Ajustes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="Vistas\Ajustes\Paginas\Pagina_Ajustes.xaml.cs">
+      <DependentUpon>Pagina_Ajustes.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -132,16 +188,16 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="login\imagenes\img1.png" />
-    <Resource Include="login\imagenes\creeper.png" />
-    <Resource Include="login\imagenes\chest.png" />
-    <Resource Include="login\imagenes\crafting_table.png" />
-    <Resource Include="login\imagenes\golden_apple.png" />
-    <Resource Include="login\imagenes\grass_block.png" />
-    <Resource Include="login\imagenes\pickaxe.png" />
-    <Resource Include="login\imagenes\potion.png" />
-    <Resource Include="login\imagenes\servericon.png" />
-    <Resource Include="login\imagenes\sword.png" />
+    <Resource Include="Assets\Imagenes\img1.png" />
+    <Resource Include="Assets\Imagenes\creeper.png" />
+    <Resource Include="Assets\Imagenes\chest.png" />
+    <Resource Include="Assets\Imagenes\crafting_table.png" />
+    <Resource Include="Assets\Imagenes\golden_apple.png" />
+    <Resource Include="Assets\Imagenes\grass_block.png" />
+    <Resource Include="Assets\Imagenes\pickaxe.png" />
+    <Resource Include="Assets\Imagenes\potion.png" />
+    <Resource Include="Assets\Imagenes\servericon.png" />
+    <Resource Include="Assets\Imagenes\sword.png" />
     <Resource Include="Assets\Fonts\Poppins-Regular.ttf" />
     <Resource Include="Assets\Fonts\Poppins-Bold.ttf" />
   </ItemGroup>

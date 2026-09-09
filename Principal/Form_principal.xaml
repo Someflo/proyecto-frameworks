@@ -1,0 +1,367 @@
+<Window x:Class="Registro_Estudianes_36.Principal.Form_principal"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Registro_Estudianes_36.Principal"
+        mc:Ignorable="d"
+        Title="Form_principal" Height="720" Width="1366"
+        Closing="Window_Closing">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Recursos/estilos_colores.xaml"/>
+                <ResourceDictionary Source="/Recursos/estilos_label.xaml"/>
+                <ResourceDictionary Source="/Recursos/estilos_boton.xaml"/>
+                <ResourceDictionary Source="/Recursos/estilos_textbox.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid Background="{StaticResource MC_ShadowLow}"
+          x:Name="Grid_principal">
+
+        <Grid.ColumnDefinitions>
+   
+            <ColumnDefinition Width="200"/>
+ 
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+
+        <Border Grid.Column="0" Background="{StaticResource MC_BorderDark}" BorderBrush="{StaticResource MC_ShadowLow}" BorderThickness="0,0,2,0">
+            <StackPanel x:Name="Panel_Menu_Lateral" Orientation="Vertical">
+
+                <Image x:Name="Img_logo"
+                       Source="/Assets/Imagenes/servericon.png" 
+                       Height="80" Width="80" 
+                       Stretch="Uniform" 
+                       Margin="10,20,10,30"
+                       RenderOptions.BitmapScalingMode="NearestNeighbor"/>
+
+                <RadioButton x:Name="RadioBoton_Lateral_Inicio" GroupName="MenuNavegacion" Click="inicio_click">
+                    <RadioButton.Style>
+                        <Style TargetType="RadioButton" BasedOn="{StaticResource EstiloBotonLateral}">
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding IsChecked, ElementName=RadioBoton_Central_Inicio}" Value="True">
+                                    <Setter Property="IsChecked" Value="True"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </RadioButton.Style>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/Assets/Imagenes/creeper.png" Width="20" Height="20" Margin="0,0,15,0" RenderOptions.BitmapScalingMode="NearestNeighbor"/>
+                        <Label Content="Inicio" Foreground="{StaticResource MC_TextWhite}" FontFamily="Consolas" FontWeight="Bold" FontSize="14" VerticalAlignment="Center" Padding="0"/>
+                    </StackPanel>
+                </RadioButton>
+
+              
+                <RadioButton x:Name="RadioBoton_Lateral_Materias" GroupName="MenuNavegacion" Click="materias_click">
+                    <RadioButton.Style>
+                        <Style TargetType="RadioButton" BasedOn="{StaticResource EstiloBotonLateral}">
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding IsChecked, ElementName=RadioBoton_Central_Materias}" Value="True">
+                                    <Setter Property="IsChecked" Value="True"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </RadioButton.Style>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/Assets/Imagenes/chest.png" Width="20" Height="20" Margin="0,0,15,0" RenderOptions.BitmapScalingMode="NearestNeighbor"/>
+                        <Label Content="Materias" Foreground="{StaticResource MC_TextWhite}" FontFamily="Consolas" FontWeight="Bold" FontSize="14" VerticalAlignment="Center" Padding="0"/>
+                    </StackPanel>
+                </RadioButton>
+
+                <RadioButton x:Name="RadioBoton_Lateral_Alumnos" GroupName="MenuNavegacion" Click="alumnos_click">
+                    <RadioButton.Style>
+                        <Style TargetType="RadioButton" BasedOn="{StaticResource EstiloBotonLateral}">
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding IsChecked, ElementName=RadioBoton_Central_Alumnos}" Value="True">
+                                    <Setter Property="IsChecked" Value="True"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </RadioButton.Style>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/Assets/Imagenes/crafting_table.png" Width="20" Height="20" Margin="0,0,15,0" RenderOptions.BitmapScalingMode="NearestNeighbor"/>
+                        <Label Content="Alumnos" Foreground="{StaticResource MC_TextWhite}" FontFamily="Consolas" FontWeight="Bold" FontSize="14" VerticalAlignment="Center" Padding="0"/>
+                    </StackPanel>
+                </RadioButton>
+
+                
+                <RadioButton x:Name="RadioBoton_Lateral_Incidencias" GroupName="MenuNavegacion" Click="incidencias_click">
+                    <RadioButton.Style>
+                        <Style TargetType="RadioButton" BasedOn="{StaticResource EstiloBotonLateral}">
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding IsChecked, ElementName=RadioBoton_Central_Incidencias}" Value="True">
+                                    <Setter Property="IsChecked" Value="True"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </RadioButton.Style>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/Assets/Imagenes/golden_apple.png" Width="20" Height="20" Margin="0,0,15,0" RenderOptions.BitmapScalingMode="NearestNeighbor"/>
+                        <Label Content="Incidencias" Foreground="{StaticResource MC_TextWhite}" FontFamily="Consolas" FontWeight="Bold" FontSize="14" VerticalAlignment="Center" Padding="0"/>
+                    </StackPanel>
+                </RadioButton>
+
+                
+                <RadioButton x:Name="RadioBoton_Lateral_WebCusva" GroupName="MenuNavegacion" Click="webcusva_click">
+                    <RadioButton.Style>
+                        <Style TargetType="RadioButton" BasedOn="{StaticResource EstiloBotonLateral}">
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding IsChecked, ElementName=RadioBoton_Central_WebCusva}" Value="True">
+                                    <Setter Property="IsChecked" Value="True"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </RadioButton.Style>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/Assets/Imagenes/grass_block.png" Width="20" Height="20" Margin="0,0,15,0" RenderOptions.BitmapScalingMode="NearestNeighbor"/>
+                        <Label Content="Web Cusva" Foreground="{StaticResource MC_TextWhite}" FontFamily="Consolas" FontWeight="Bold" FontSize="14" VerticalAlignment="Center" Padding="0"/>
+                    </StackPanel>
+                </RadioButton>
+
+                
+                <RadioButton x:Name="RadioBoton_Lateral_Semanas" GroupName="MenuNavegacion" Click="semanas_click">
+                    <RadioButton.Style>
+                        <Style TargetType="RadioButton" BasedOn="{StaticResource EstiloBotonLateral}">
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding IsChecked, ElementName=RadioBoton_Central_Semanas}" Value="True">
+                                    <Setter Property="IsChecked" Value="True"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </RadioButton.Style>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/Assets/Imagenes/pickaxe.png" Width="20" Height="20" Margin="0,0,15,0" RenderOptions.BitmapScalingMode="NearestNeighbor"/>
+                        <Label Content="Semanas" Foreground="{StaticResource MC_TextWhite}" FontFamily="Consolas" FontWeight="Bold" FontSize="14" VerticalAlignment="Center" Padding="0"/>
+                    </StackPanel>
+                </RadioButton>
+
+               
+                <RadioButton x:Name="RadioBoton_Lateral_KillExcels" GroupName="MenuNavegacion" Click="killexcels_click">
+                    <RadioButton.Style>
+                        <Style TargetType="RadioButton" BasedOn="{StaticResource EstiloBotonLateral}">
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding IsChecked, ElementName=RadioBoton_Central_KillExcels}" Value="True">
+                                    <Setter Property="IsChecked" Value="True"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </RadioButton.Style>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/Assets/Imagenes/sword.png" Width="20" Height="20" Margin="0,0,15,0" RenderOptions.BitmapScalingMode="NearestNeighbor"/>
+                        <Label Content="KillExcels" Foreground="{StaticResource MC_TextWhite}" FontFamily="Consolas" FontWeight="Bold" FontSize="14" VerticalAlignment="Center" Padding="0"/>
+                    </StackPanel>
+                </RadioButton>
+
+                
+                <RadioButton x:Name="RadioBoton_Lateral_Pociones" GroupName="MenuNavegacion" Click="pociones_click">
+                    <RadioButton.Style>
+                        <Style TargetType="RadioButton" BasedOn="{StaticResource EstiloBotonLateral}">
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding IsChecked, ElementName=RadioBoton_Central_Pociones}" Value="True">
+                                    <Setter Property="IsChecked" Value="True"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </RadioButton.Style>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/Assets/Imagenes/potion.png" Width="20" Height="20" Margin="0,0,15,0" RenderOptions.BitmapScalingMode="NearestNeighbor"/>
+                        <Label Content="Pociones" Foreground="{StaticResource MC_TextWhite}" FontFamily="Consolas" FontWeight="Bold" FontSize="14" VerticalAlignment="Center" Padding="0"/>
+                    </StackPanel>
+                </RadioButton>
+
+              
+                <RadioButton x:Name="RadioBoton_Lateral_Ajustes" GroupName="MenuNavegacion" Click="ajustes_click">
+                    <RadioButton.Style>
+                        <Style TargetType="RadioButton" BasedOn="{StaticResource EstiloBotonLateral}">
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding IsChecked, ElementName=RadioBoton_Central_Ajustes}" Value="True">
+                                    <Setter Property="IsChecked" Value="True"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </RadioButton.Style>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/Assets/Imagenes/servericon.png" Width="20" Height="20" Margin="0,0,15,0" RenderOptions.BitmapScalingMode="NearestNeighbor"/>
+                        <Label Content="Ajustes" Foreground="{StaticResource MC_TextWhite}" FontFamily="Consolas" FontWeight="Bold" FontSize="14" VerticalAlignment="Center" Padding="0"/>
+                    </StackPanel>
+                </RadioButton>
+
+            </StackPanel>
+        </Border>
+
+        <Grid Grid.Column="1" Margin="30">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Frame x:Name="ContenedorPrincipal" Grid.Row="1" NavigationUIVisibility="Hidden"/>
+            
+            <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,0,0,20">
+                <Button Content="Nuevo Registro" Background="{StaticResource MC_BaseGray}" Style="{StaticResource EstiloBotonRedondeado}"/>
+                <Button Content="Ver Reportes" Background="{StaticResource MC_BaseGray}" Style="{StaticResource EstiloBotonRedondeado}"/>
+                <Button Content="Alertas" Background="#8B3A3A" Style="{StaticResource EstiloBotonRedondeado}"/>
+            </StackPanel>
+
+     
+            <Grid x:Name="Panel_Menu_Cuadricula" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="150"/>
+                    <ColumnDefinition Width="150"/>
+                    <ColumnDefinition Width="150"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="120"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="120"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="120"/>
+                    <RowDefinition Height="40"/>
+                </Grid.RowDefinitions>
+
+               
+                
+                <Border Grid.Row="0" Grid.Column="0" Style="{StaticResource EstiloContenedor}" Margin="10">
+                    <RadioButton x:Name="RadioBoton_Central_Inicio" GroupName="CuadriculaOpciones" Click="inicio_click">
+                        <RadioButton.Style>
+                            <Style TargetType="RadioButton" BasedOn="{StaticResource EstiloRadioButtonCuadricula}">
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding IsChecked, ElementName=RadioBoton_Lateral_Inicio}" Value="True">
+                                        <Setter Property="IsChecked" Value="True"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </RadioButton.Style>
+                        <Image Source="/Assets/Imagenes/creeper.png" Height="60" Width="60" RenderOptions.BitmapScalingMode="NearestNeighbor"/>
+                    </RadioButton>
+                </Border>
+                <Label x:Name="label_menu" Grid.Row="1" Content="Inicio" Foreground="{StaticResource MC_TextWhite}" FontFamily="Consolas" FontWeight="Bold" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Top" MouseEnter="label_menu_MouseEnter"/>
+
+                
+                <Border Grid.Row="0" Grid.Column="1" Style="{StaticResource EstiloContenedor}" Margin="10">
+                    <RadioButton x:Name="RadioBoton_Central_Materias" GroupName="CuadriculaOpciones" Click="materias_click">
+                        <RadioButton.Style>
+                            <Style TargetType="RadioButton" BasedOn="{StaticResource EstiloRadioButtonCuadricula}">
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding IsChecked, ElementName=RadioBoton_Lateral_Materias}" Value="True">
+                                        <Setter Property="IsChecked" Value="True"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </RadioButton.Style>
+                        <Image Source="/Assets/Imagenes/chest.png" Height="60" Width="60" RenderOptions.BitmapScalingMode="NearestNeighbor"/>
+                    </RadioButton>
+                </Border>
+                <Label Grid.Row="1" Grid.Column="1" Content="Materias" Foreground="{StaticResource MC_TextWhite}" FontFamily="Consolas" FontWeight="Bold" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+
+                
+                <Border Grid.Row="0" Grid.Column="2" Style="{StaticResource EstiloContenedor}" Margin="10">
+                    <RadioButton x:Name="RadioBoton_Central_Alumnos" GroupName="CuadriculaOpciones" Click="alumnos_click">
+                        <RadioButton.Style>
+                            <Style TargetType="RadioButton" BasedOn="{StaticResource EstiloRadioButtonCuadricula}">
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding IsChecked, ElementName=RadioBoton_Lateral_Alumnos}" Value="True">
+                                        <Setter Property="IsChecked" Value="True"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </RadioButton.Style>
+                        <Image Source="/Assets/Imagenes/crafting_table.png" Height="60" Width="60" RenderOptions.BitmapScalingMode="NearestNeighbor"/>
+                    </RadioButton>
+                </Border>
+                <Label Grid.Row="1" Grid.Column="2" Content="Alumnos" Foreground="{StaticResource MC_TextWhite}" FontFamily="Consolas" FontWeight="Bold" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+
+                
+                <Border Grid.Row="2" Grid.Column="0" Style="{StaticResource EstiloContenedor}" Margin="10">
+                    <RadioButton x:Name="RadioBoton_Central_Incidencias" GroupName="CuadriculaOpciones" Click="incidencias_click">
+                        <RadioButton.Style>
+                            <Style TargetType="RadioButton" BasedOn="{StaticResource EstiloRadioButtonCuadricula}">
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding IsChecked, ElementName=RadioBoton_Lateral_Incidencias}" Value="True">
+                                        <Setter Property="IsChecked" Value="True"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </RadioButton.Style>
+                        <Image Source="/Assets/Imagenes/golden_apple.png" Height="60" Width="60" RenderOptions.BitmapScalingMode="NearestNeighbor"/>
+                    </RadioButton>
+                </Border>
+                <Label Grid.Row="3" Grid.Column="0" Content="Incidencias" Foreground="{StaticResource MC_TextWhite}" FontFamily="Consolas" FontWeight="Bold" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+
+                
+                <Border Grid.Row="2" Grid.Column="1" Style="{StaticResource EstiloContenedor}" Margin="10">
+                    <RadioButton x:Name="RadioBoton_Central_WebCusva" GroupName="CuadriculaOpciones" Click="webcusva_click">
+                        <RadioButton.Style>
+                            <Style TargetType="RadioButton" BasedOn="{StaticResource EstiloRadioButtonCuadricula}">
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding IsChecked, ElementName=RadioBoton_Lateral_WebCusva}" Value="True">
+                                        <Setter Property="IsChecked" Value="True"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </RadioButton.Style>
+                        <Image Source="/Assets/Imagenes/grass_block.png" Height="60" Width="60" RenderOptions.BitmapScalingMode="NearestNeighbor"/>
+                    </RadioButton>
+                </Border>
+                <Label Grid.Row="3" Grid.Column="1" Content="Web Cusva" Foreground="{StaticResource MC_TextWhite}" FontFamily="Consolas" FontWeight="Bold" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+
+                
+                <Border Grid.Row="2" Grid.Column="2" Style="{StaticResource EstiloContenedor}" Margin="10">
+                    <RadioButton x:Name="RadioBoton_Central_Semanas" GroupName="CuadriculaOpciones" Click="semanas_click">
+                        <RadioButton.Style>
+                            <Style TargetType="RadioButton" BasedOn="{StaticResource EstiloRadioButtonCuadricula}">
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding IsChecked, ElementName=RadioBoton_Lateral_Semanas}" Value="True">
+                                        <Setter Property="IsChecked" Value="True"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </RadioButton.Style>
+                        <Image Source="/Assets/Imagenes/pickaxe.png" Height="60" Width="60" RenderOptions.BitmapScalingMode="NearestNeighbor"/>
+                    </RadioButton>
+                </Border>
+                <Label Grid.Row="3" Grid.Column="2" Content="Semanas" Foreground="{StaticResource MC_TextWhite}" FontFamily="Consolas" FontWeight="Bold" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+
+              
+                <Border Grid.Row="4" Grid.Column="0" Style="{StaticResource EstiloContenedor}" Margin="10">
+                    <RadioButton x:Name="RadioBoton_Central_KillExcels" GroupName="CuadriculaOpciones" Click="killexcels_click">
+                        <RadioButton.Style>
+                            <Style TargetType="RadioButton" BasedOn="{StaticResource EstiloRadioButtonCuadricula}">
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding IsChecked, ElementName=RadioBoton_Lateral_KillExcels}" Value="True">
+                                        <Setter Property="IsChecked" Value="True"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </RadioButton.Style>
+                        <Image Source="/Assets/Imagenes/sword.png" Height="60" Width="60" RenderOptions.BitmapScalingMode="NearestNeighbor"/>
+                    </RadioButton>
+                </Border>
+                <Label Grid.Row="5" Grid.Column="0" Content="KillExcels" Foreground="{StaticResource MC_TextWhite}" FontFamily="Consolas" FontWeight="Bold" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+
+                
+                <Border Grid.Row="4" Grid.Column="1" Style="{StaticResource EstiloContenedor}" Margin="10">
+                    <RadioButton x:Name="RadioBoton_Central_Pociones" GroupName="CuadriculaOpciones" Click="pociones_click" Style="{StaticResource EstiloRadioButtonCuadricula}">
+                        <Image Source="/Assets/Imagenes/potion.png" Height="60" Width="60" RenderOptions.BitmapScalingMode="NearestNeighbor"/>
+                    </RadioButton>
+                </Border>
+                <Label Grid.Row="5" Grid.Column="1" Content="Pociones" Foreground="{StaticResource MC_TextWhite}" FontFamily="Consolas" FontWeight="Bold" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+
+                
+                <Border Grid.Row="4" Grid.Column="2" Style="{StaticResource EstiloContenedor}" Margin="10">
+                    <RadioButton x:Name="RadioBoton_Central_Ajustes" GroupName="CuadriculaOpciones" Click="ajustes_click" Style="{StaticResource EstiloRadioButtonCuadricula}">
+                        <Image Source="/Assets/Imagenes/servericon.png" Height="60" Width="60" RenderOptions.BitmapScalingMode="NearestNeighbor"/>
+                    </RadioButton>
+                </Border>
+                <Label Grid.Row="5" Grid.Column="2" Content="Ajustes" Foreground="{StaticResource MC_TextWhite}" FontFamily="Consolas" FontWeight="Bold" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+
+            </Grid>
+            
+        </Grid>
+       
+    </Grid>
+</Window>

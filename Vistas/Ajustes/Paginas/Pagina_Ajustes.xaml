@@ -1,0 +1,45 @@
+<Page x:Class="Registro_Estudianes_36.Vistas.Ajustes.Paginas.Pagina_Ajustes"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="Ajustes" Background="#373737">
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Recursos/estilos_colores.xaml"/>
+                <ResourceDictionary Source="/Recursos/estilos_boton.xaml"/>
+                <ResourceDictionary Source="/Recursos/estilos_label.xaml"/>
+                <ResourceDictionary Source="/Recursos/estilos_textbox.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
+
+    <Grid Margin="20">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="200"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="0" Orientation="Vertical" HorizontalAlignment="Left" Width="300" Margin="10">
+            <Label Content="Nombre de Usuario System:" Foreground="White" FontSize="13" Margin="0,0,0,2"/>
+            <TextBox Height="28" Width="280" HorizontalAlignment="Left" Margin="0,0,0,10" Style="{StaticResource RoundedTextBoxStyle}"/>
+
+            <Label Content="Servidor MySQL / BD:" Foreground="White" FontSize="13" Margin="0,0,0,2"/>
+            <TextBox Height="28" Width="280" HorizontalAlignment="Left" Margin="0,0,0,10" Style="{StaticResource RoundedTextBoxStyle}"/>
+
+            <Label Content="Base de Datos:" Foreground="White" FontSize="13" Margin="0,0,0,2"/>
+            <TextBox Height="28" Width="280" HorizontalAlignment="Left" Margin="0,0,0,10" Style="{StaticResource RoundedTextBoxStyle}"/>
+
+            <Label Content="Idioma Preferido:" Foreground="White" FontSize="13" Margin="0,0,0,2"/>
+            <TextBox Height="28" Width="280" HorizontalAlignment="Left" Margin="0,0,0,10" Style="{StaticResource RoundedTextBoxStyle}"/>
+
+            <Label Content="Tema de Interfaz:" Foreground="White" FontSize="13" Margin="0,0,0,2"/>
+            <TextBox Height="28" Width="280" HorizontalAlignment="Left" Margin="0,0,0,10" Style="{StaticResource RoundedTextBoxStyle}"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" Orientation="Vertical" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10">
+            <Button Content="Ingresar" Style="{StaticResource BotonSimple}"/>
+            <Button Content="Eliminar" Style="{StaticResource BotonSimple}"/>
+            <Button Content="Guardar" Style="{StaticResource BotonSimple}"/>
+        </StackPanel>
+    </Grid>
+</Page>
