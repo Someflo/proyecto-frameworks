@@ -27,9 +27,31 @@ namespace Registro_Estudianes_36.Login
 
         private void Boton_Iniciar_Click(object sender, RoutedEventArgs e)
         {
-            Form_principal Form_P = new Form_principal();
-            Form_P.Show();
-            Hide();
+          
+
+            try
+            {
+                if (usuariocampo.Text == "admin" && contraseñacampo.Text == "admin")
+                {
+                    Form_principal Form_P = new Form_principal();
+                    Form_P.Show();
+                    Hide();
+
+                }
+                else
+                {
+                    MessageBox.Show("usuario y contrase;a incorrectos, intente de nuevo", "Error 404", MessageBoxButton.OK, MessageBoxImage.Error);
+                    
+                    contraseñacampo.Clear();
+                    usuariocampo.Clear();
+                    
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al navegar al iniciar sesion  " + ex.Message, "Error 404", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
     }
 }

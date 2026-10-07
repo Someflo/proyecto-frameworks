@@ -37,6 +37,10 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.SQLite, Version=2.0.4.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>packages\System.Data.SQLite.2.0.4\lib\net471\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -178,11 +182,11 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -200,6 +204,11 @@
     <Resource Include="Assets\Imagenes\sword.png" />
     <Resource Include="Assets\Fonts\Poppins-Regular.ttf" />
     <Resource Include="Assets\Fonts\Poppins-Bold.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Vistas\Alumnos\Imagenes\actualizar.png" />
+    <Resource Include="Vistas\Alumnos\Imagenes\agregar.png" />
+    <Resource Include="Vistas\Alumnos\Imagenes\eliminar.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

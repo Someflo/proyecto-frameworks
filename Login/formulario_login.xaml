@@ -28,7 +28,8 @@
                HorizontalAlignment="Left" RenderTransformOrigin="-0.508,0.457" Width="244"/>
 
 
-        <TextBox Text="username"
+        <TextBox Text="username" 
+                 Name="usuariocampo"
                  Style="{StaticResource RoundedTextBoxStyle}"
                  Margin="68,203,0,0"/>
         <Label Content="Password"
@@ -39,7 +40,8 @@
         HorizontalAlignment="Left" RenderTransformOrigin="-0.508,0.457" Width="244"/>
 
 
-        <TextBox Text="Password"
+        <TextBox Text="Password" 
+                 Name="contraseñacampo"
                  Style="{StaticResource RoundedTextBoxStyle}"
                  Margin="68,301,0,0" RenderTransformOrigin="0.49,6.728"/>
         <Button x:Name="Boton_Iniciar"

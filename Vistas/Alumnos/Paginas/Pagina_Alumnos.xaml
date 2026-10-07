@@ -14,32 +14,104 @@
     </Page.Resources>
 
     <Grid Margin="20">
+        
+        
+        
+        <Grid.ContextMenu>
+            <ContextMenu Cursor="Hand" Foreground="Black" Background="White" FontSize="13">
+
+                <MenuItem Header="Agregar" Click="Agregar_Click">
+                    <MenuItem.Icon>
+                        <Image Source="C:\Users\whoxe\Desktop\Frameworks\registroestudiantes36\Registro_Estudianes_36\Vistas\Alumnos\Imagenes\agregar.png" Width="16" Height="16"/>
+
+
+                    </MenuItem.Icon>
+
+                </MenuItem>
+
+
+                <Separator/>
+
+
+
+                <MenuItem Header="eliminar" Click="Eliminar_Click">
+                    <MenuItem.Icon>
+                        <Image Source="C:\Users\whoxe\Desktop\Frameworks\registroestudiantes36\Registro_Estudianes_36\Vistas\Alumnos\Imagenes\eliminar.png" Width="16" Height="16"/>
+
+
+                    </MenuItem.Icon>
+
+                </MenuItem>
+
+                <MenuItem Header="actualizar" Click="Actualizar_Click">
+                    <MenuItem.Icon>
+                        <Image Source="C:\Users\whoxe\Desktop\Frameworks\registroestudiantes36\Registro_Estudianes_36\Vistas\Alumnos\Imagenes\actualizar.png" Width="16" Height="16"/>
+
+
+                    </MenuItem.Icon>
+
+                </MenuItem>
+
+
+
+
+
+
+            </ContextMenu>
+        </Grid.ContextMenu>
+
+
+
+
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <StackPanel Grid.Column="0" Orientation="Vertical" HorizontalAlignment="Left" Width="300" Margin="10">
-            <Label Content="Nombre del alumno:" Foreground="White" FontSize="13" Margin="0,0,0,2"/>
-            <TextBox Height="28" Width="280" HorizontalAlignment="Left" Margin="0,0,0,10" Style="{StaticResource RoundedTextBoxStyle}"/>
 
-            <Label Content="Edad:" Foreground="White" FontSize="13" Margin="0,0,0,2"/>
-            <TextBox Height="28" Width="280" HorizontalAlignment="Left" Margin="0,0,0,10" Style="{StaticResource RoundedTextBoxStyle}"/>
+        <StackPanel Grid.Column="0" Orientation="Vertical" HorizontalAlignment="Left" Width="290" Margin="10,10,0,10">
+            <Label Content="Ingreso datos" FontWeight="Bold" Foreground="White" />
+
+            <Label Content="ID del alumno:" Foreground="White" FontSize="13" Margin="0,0,0,2"/>
+            <TextBox x:Name="txtId" Height="28" Width="280" HorizontalAlignment="Left" Margin="0,0,0,10" Style="{StaticResource RoundedTextBoxStyle}"/>
+            
+            <Label Content="Nombre del alumno:" Foreground="White" FontSize="13" Margin="0,0,0,2"/>
+            <TextBox x:Name="txtNombre" Height="28" Width="280" HorizontalAlignment="Left" Margin="0,0,0,10" Style="{StaticResource RoundedTextBoxStyle}"/>
 
             <Label Content="Correo Electrónico:" Foreground="White" FontSize="13" Margin="0,0,0,2"/>
-            <TextBox Height="28" Width="280" HorizontalAlignment="Left" Margin="0,0,0,10" Style="{StaticResource RoundedTextBoxStyle}"/>
-
-            <Label Content="Matrícula:" Foreground="White" FontSize="13" Margin="0,0,0,2"/>
-            <TextBox Height="28" Width="280" HorizontalAlignment="Left" Margin="0,0,0,10" Style="{StaticResource RoundedTextBoxStyle}"/>
+            <TextBox x:Name="txtCorreo" Height="28" Width="280" HorizontalAlignment="Left" Margin="0,0,0,10" Style="{StaticResource RoundedTextBoxStyle}"/>
 
             <Label Content="Carrera:" Foreground="White" FontSize="13" Margin="0,0,0,2"/>
-            <TextBox Height="28" Width="280" HorizontalAlignment="Left" Margin="0,0,0,10" Style="{StaticResource RoundedTextBoxStyle}"/>
+            <TextBox x:Name="txtCarrera" Height="28" Width="280" HorizontalAlignment="Left" Margin="0,0,0,10" Style="{StaticResource RoundedTextBoxStyle}"/>
+            <Button Content="Ingresar" Style="{StaticResource BotonSimple}" Click="Button_Click"/>
+        </StackPanel>
+        
+        
+        <StackPanel Grid.Column="1" Orientation="Vertical" HorizontalAlignment="left" VerticalAlignment="Top" Margin="10">
+
+
+            <CheckBox x:Name="chkPrepa" Content="Preparatoria" Margin="0,10,0,0" 
+          Click="chkPrepa_Click" Foreground="White" />
+
+            <CheckBox x:Name="chkLicenciatura" Content="Licenciatura" Margin="0,10,0,0" 
+          Click="chkLicenciatura_Click" Foreground="White" />
+
+            <CheckBox x:Name="chkMaestria" Content="Maestría" Margin="0,10,0,0" 
+          Click="chkMaestria_Click" Foreground="White" />
+
+
         </StackPanel>
 
-        <StackPanel Grid.Column="1" Orientation="Vertical" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10">
-            <Button Content="Ingresar" Style="{StaticResource BotonSimple}"/>
-            <Button Content="Eliminar" Style="{StaticResource BotonSimple}"/>
-            <Button Content="Guardar" Style="{StaticResource BotonSimple}"/>
+        <StackPanel Grid.Column="2" HorizontalAlignment="Left" Width="220" Margin="10">
+            <Label Content="DATOS" Foreground="White" FontWeight="Bold" Style="{StaticResource LabelSimple}" />
+
+            <Label x:Name="lblMostrarNombre" Foreground="white" Content="Nombre: " Style="{StaticResource LabelSimple}" />
+            <Label x:Name="lblMostrarId" Foreground="white" Content="ID: " Style="{StaticResource LabelSimple}" />
+            <Label x:Name="lblMostrarCorreo" Foreground="white" Content="Correo: " Style="{StaticResource LabelSimple}" />
+            <Label x:Name="lblMostrarCarrera" Foreground="white" Content="Carrera: " Style="{StaticResource LabelSimple}" />
+            <Label x:Name="lblMostrarPago" Foreground="white" Content="Pago: $0" Style="{StaticResource LabelSimple}" />
         </StackPanel>
+
     </Grid>
 </Page>

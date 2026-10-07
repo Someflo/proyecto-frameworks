@@ -5,7 +5,6 @@ using System.Windows.Media;
 
 namespace Registro_Estudianes_36.Principal
 {
-   
     public partial class Form_principal : Window
     {
         public Form_principal()
@@ -19,49 +18,58 @@ namespace Registro_Estudianes_36.Principal
             label_menu.FontSize = 20;
         }
 
+        private void NavegarA(string ruta)
+        {
+            Panel_Menu_Cuadricula.Visibility = Visibility.Collapsed;
+            ContenedorPrincipal.Visibility = Visibility.Visible;
+            ContenedorPrincipal.Navigate(new Uri(ruta, UriKind.RelativeOrAbsolute));
+        }
+
         private void inicio_click(object sender, RoutedEventArgs e)
         {
             ContenedorPrincipal.Navigate((Uri)null);
+            ContenedorPrincipal.Visibility = Visibility.Collapsed;
+            Panel_Menu_Cuadricula.Visibility = Visibility.Visible;
         }
 
         private void materias_click(object sender, RoutedEventArgs e)
         {
-            ContenedorPrincipal.Navigate(new Uri("Vistas/Materias/Paginas/Pagina_Materias.xaml", UriKind.RelativeOrAbsolute));
+            NavegarA("Vistas/Materias/Paginas/Pagina_Materias.xaml");
         }
 
         private void alumnos_click(object sender, RoutedEventArgs e)
         {
-            ContenedorPrincipal.Navigate(new Uri("Vistas/Alumnos/Paginas/Pagina_Alumnos.xaml", UriKind.RelativeOrAbsolute));
+            NavegarA("Vistas/Alumnos/Paginas/Pagina_Alumnos.xaml");
         }
 
         private void incidencias_click(object sender, RoutedEventArgs e)
         {
-            ContenedorPrincipal.Navigate(new Uri("Vistas/Incidencias/Paginas/Pagina_Incidencias.xaml", UriKind.RelativeOrAbsolute));
+            NavegarA("Vistas/Incidencias/Paginas/Pagina_Incidencias.xaml");
         }
 
         private void webcusva_click(object sender, RoutedEventArgs e)
         {
-            ContenedorPrincipal.Navigate(new Uri("Vistas/WebCusva/Paginas/Pagina_WebCusva.xaml", UriKind.RelativeOrAbsolute));
+            NavegarA("Vistas/WebCusva/Paginas/Pagina_WebCusva.xaml");
         }
 
         private void semanas_click(object sender, RoutedEventArgs e)
         {
-            ContenedorPrincipal.Navigate(new Uri("Vistas/Semanas/Paginas/Pagina_Semanas.xaml", UriKind.RelativeOrAbsolute));
+            NavegarA("Vistas/Semanas/Paginas/Pagina_Semanas.xaml");
         }
 
         private void killexcels_click(object sender, RoutedEventArgs e)
         {
-            ContenedorPrincipal.Navigate(new Uri("Vistas/KillExcels/Paginas/Pagina_KillExcels.xaml", UriKind.RelativeOrAbsolute));
+            NavegarA("Vistas/KillExcels/Paginas/Pagina_KillExcels.xaml");
         }
 
         private void pociones_click(object sender, RoutedEventArgs e)
         {
-            ContenedorPrincipal.Navigate(new Uri("Vistas/Pociones/Paginas/Pagina_Pociones.xaml", UriKind.RelativeOrAbsolute));
+            NavegarA("Vistas/Pociones/Paginas/Pagina_Pociones.xaml");
         }
 
         private void ajustes_click(object sender, RoutedEventArgs e)
         {
-            ContenedorPrincipal.Navigate(new Uri("Vistas/Ajustes/Paginas/Pagina_Ajustes.xaml", UriKind.RelativeOrAbsolute));
+            NavegarA("Vistas/Ajustes/Paginas/Pagina_Ajustes.xaml");
         }
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)

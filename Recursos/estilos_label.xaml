@@ -3,8 +3,8 @@
 
     <Style x:Key="LabelSimple" TargetType="Label">
         <Setter Property="Foreground" Value="#FF1C1C1C"/>
-        <Setter Property="FontSize" Value="32"/>
-        <Setter Property="Margin" Value="50,36,0,577"/>
+        <Setter Property="FontSize" Value="15"/>
+       
         <Setter Property="HorizontalAlignment" Value="Left"/>
         <Setter Property="FontFamily" Value="pack://application:,,,/Assets/Fonts/#Poppins"/>
     </Style>
