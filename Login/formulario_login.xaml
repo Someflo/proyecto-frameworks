@@ -31,7 +31,40 @@
         <TextBox Text="username" 
                  Name="usuariocampo"
                  Style="{StaticResource RoundedTextBoxStyle}"
-                 Margin="68,203,0,0"/>
+                 Margin="68,203,0,0">
+        <TextBox.ContextMenu>
+            <ContextMenu Cursor="Hand" Foreground="Black" Background="White" FontSize="13">
+
+                <MenuItem Header="Limpiar campo" Click="Limpiar_campo_click">
+               
+
+                </MenuItem>
+
+
+                <Separator/>
+
+
+
+                <MenuItem Header="Autocompletar admin" Click="Autocompletar_click">
+                
+
+                </MenuItem>
+
+                <MenuItem Header="Ver ayuda" Click="ayuda_click">
+                
+                </MenuItem>
+
+
+
+
+
+
+            </ContextMenu>
+        </TextBox.ContextMenu>
+        </TextBox>
+
+
+
         <Label Content="Password"
         FontFamily="pack://application:,,,/Assets/Fonts/#Poppins" 
         FontSize="16"

@@ -53,5 +53,19 @@ namespace Registro_Estudianes_36.Login
                 MessageBox.Show("Error al navegar al iniciar sesion  " + ex.Message, "Error 404", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
+
+        private void Limpiar_campo_click(object sender, RoutedEventArgs e) {
+            }
+        private void Autocompletar_click(object sender, RoutedEventArgs e)
+        {
+        }
+
+        private void ayuda_click(object sender, RoutedEventArgs e)
+        {
+        }
+
     }
+
+
+
 }
